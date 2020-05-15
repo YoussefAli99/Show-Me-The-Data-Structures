@@ -28,15 +28,11 @@ def huffman_decoding(data,tree):
             temp += d
     return dec
 
-if __name__ == "__main__":
-    codes = {}
+def testing(x):
+    print ("The size of the data is: {}\n".format(sys.getsizeof(x)))
+    print ("The content of the data is: {}\n".format(x))
 
-    a_great_sentence = "The bird is the word"
-
-    print ("The size of the data is: {}\n".format(sys.getsizeof(a_great_sentence)))
-    print ("The content of the data is: {}\n".format(a_great_sentence))
-
-    encoded_data, tree = huffman_encoding(a_great_sentence)
+    encoded_data, tree = huffman_encoding(x)
 
     print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
     print ("The content of the encoded data is: {}\n".format(encoded_data))
@@ -45,3 +41,13 @@ if __name__ == "__main__":
 
     print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
     print ("The content of the encoded data is: {}\n".format(decoded_data))
+
+
+if __name__ == "__main__":
+    codes = {}
+
+    great_sentences = ['The bird is the word', 'aaaaaaaaaaa', ' ']
+    for e in great_sentences:
+        testing(e)
+
+    
